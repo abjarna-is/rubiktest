@@ -18,6 +18,16 @@ beautiful mathematical formulas.
 
 :math:`\underline{x}=[  x_{1}, ...,  x_{n}]^{T}`
 
++----------+----------+
+| Header 1 | Header 2 |
++==========+==========+
+| 1        | one      |
++----------+----------+
+| 1,5      | test     |
++----------+----------+
+| 2        | two      |
++----------+----------+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
