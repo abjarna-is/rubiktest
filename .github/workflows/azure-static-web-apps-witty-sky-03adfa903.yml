@@ -20,6 +20,9 @@ jobs:
           submodules: true
           lfs: false
 
+      - name: Skip Oryx Build
+        run: echo "SKIP_ORYX_BUILD=true" >> $GITHUB_ENV
+        
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
