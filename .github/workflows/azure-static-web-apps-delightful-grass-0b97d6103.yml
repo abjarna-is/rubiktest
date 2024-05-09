@@ -32,7 +32,8 @@ jobs:
 
       - name: Build Sphinx Documentation
         run: |
-          sphinx-build -b html docs/source docs/build
+          cd docs/source
+          sphinx-build -b html . ../build
 
       - name: Build And Deploy
         id: builddeploy
@@ -46,7 +47,6 @@ jobs:
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "docs/build" # Built app content directory - optional
-          app_artifact_location: "docs/build" # Tells Oryx exactly where to find the build output
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
