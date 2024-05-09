@@ -20,9 +20,6 @@ jobs:
           submodules: true
           lfs: false
 
-      - name: Artifact azure-swa
-        run: dotnet publish --output dist
-
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
