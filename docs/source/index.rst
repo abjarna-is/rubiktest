@@ -30,25 +30,18 @@ beautiful mathematical formulas.
 
 .. tikz:: 
 
-   % A simple cycle
-   % Author : Jerome Tremblay
-   \documentclass{article}
-   \usepackage{tikz}
-   \begin{document}
    \begin{tikzpicture}
-
-   \def \n {5}
-   \def \radius {3cm}
-   \def \margin {8} % margin in angles, depends on the radius
-
-   \foreach \s in {1,...,\n}
-   {
-   \node[draw, circle] at ({360/\n * (\s - 1)}:\radius) {$\s$};
-   \draw[->, >=latex] ({360/\n * (\s - 1)+\margin}:\radius) 
-      arc ({360/\n * (\s - 1)+\margin}:{360/\n * (\s)-\margin}:\radius);
-   }
+      \node[draw, rectangle] (a) {Start};
+      \node[draw, circle, right=of a] (b) {Step 1};
+      \node[draw, diamond, aspect=2, right=of b] (c) {Decision};  % Corrected aspect ratio
+      \node[draw, rectangle, right=of c] (d) {Step 2};
+      \node[draw, rectangle, below=of c] (e) {End};
+      
+      \draw[->] (a) -- (b);
+      \draw[->] (b) -- (c);
+      \draw[->] (c) -- node[above] {yes} (d);
+      \draw[->] (c) -- node[right] {no} (e);
    \end{tikzpicture}
-   \end{document}
 
 +----------+----------+
 | Header 1 | Header 2 |
