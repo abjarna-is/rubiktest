@@ -32,11 +32,11 @@ beautiful mathematical formulas.
 
 .. tikz:: 
 
-\begin{tikzpicture}
-    \node (a) {Hello};
-    \node (b) [below of=a] {World};
-    \draw [->] (a) -- (b) node [midway, fill=white] {Arrow};
-\end{tikzpicture}
+   \begin{tikzpicture}
+      \node (a) {Hello};
+      \node (b) [below of=a] {World};
+      \draw [->] (a) -- (b) node [midway, fill=white] {Arrow};
+   \end{tikzpicture}
 
 +----------+----------+
 | Header 1 | Header 2 |
