@@ -30,6 +30,7 @@ beautiful mathematical formulas.
 
 .. tikz:: 
 
+   \begin{document}
    \begin{tikzpicture}
       \node[draw, rectangle] (a) {Start};
       \node[draw, circle, right=of a] (b) {Step 1};
@@ -42,7 +43,8 @@ beautiful mathematical formulas.
       \draw[->] (c) -- node[above] {yes} (d);
       \draw[->] (c) -- node[right] {no} (e);
    \end{tikzpicture}
-
+   \end{document}
+   
 +----------+----------+
 | Header 1 | Header 2 |
 +==========+==========+
