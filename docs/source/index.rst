@@ -30,7 +30,7 @@ beautiful mathematical formulas.
 
 .. tikz:: 
 
-   \begin{tikzpicture}[scale=0.5]
+   \begin{tikzpicture}[scale=0.5, transform shape]
       \node[draw, rectangle] (a) {Start};
       \node[draw, circle, right=of a] (b) {Step 1};
       \node[draw, diamond, aspect=2, right=of b] (c) {Decision};  % Corrected aspect ratio
