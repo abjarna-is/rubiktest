@@ -34,6 +34,10 @@ jobs:
         run: |
           sphinx-build -b html docs/source docs/build
 
+      - name: Install PyData Theme
+        run: |
+          pip install pydata-sphinx-theme
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
