@@ -30,28 +30,13 @@ beautiful mathematical formulas.
 
 .. tikz:: 
 
-\documentclass{article}
-\usepackage{tikz}
-\usepackage{pgfplots} % This package is required for creating plots
+.. tikz:: 
 
-\begin{document}
-
-\begin{tikzpicture}
-\begin{axis}[
-    ybar, % Style of the plot
-    symbolic x coords={A, B, C, D, E}, % X-axis labels
-    xtick=data, % Only show ticks for data points
-    nodes near coords, % Display the value of each bar
-    ymin=0, % Minimum value on the y-axis
-    ylabel={Value}, % Label for the y-axis
-    xlabel={Category}, % Label for the x-axis
-]
-% Data to plot
-\addplot coordinates {(A,10) (B,15) (C,7) (D,20) (E,8)};
-\end{axis}
-\end{tikzpicture}
-
-\end{document}
+   \begin{tikzpicture}
+       \node (a) {Hello};
+       \node (b) [below of=a] {World};
+       \draw [->] (a) -- (b);
+   \end{tikzpicture}
 
 
 +----------+----------+
