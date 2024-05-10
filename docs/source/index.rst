@@ -30,73 +30,81 @@ beautiful mathematical formulas.
 
 .. tikz:: 
 
+   \documentclass{minimal}
+   \usepackage{tikz}
+   \usetikzlibrary{arrows,calc}
+   \usepackage{relsize}
+   \newcommand\LM{\ensuremath{\mathit{LM}}}
+   \newcommand\IS{\ensuremath{\mathit{IS}}}
    \begin{document}
-   \begin{tikzpicture}[scale=1]
-      % Axis
-      \coordinate (y) at (0,5);
-      \coordinate (x) at (5,0);
-      \draw[<->] (y) node[above] {$r$} -- (0,0) --  (x) node[right]
-      {$\mathit{EV}$};
-      % A grid can be useful when defining coordinates
-      % \draw[step=1mm, gray, thin] (0,0) grid (5,5); 
-      % \draw[step=5mm, black] (0,0) grid (5,5); 
 
-      % Let us define some coordinates
-      \path
-      coordinate (start) at (0,4)
-      coordinate (c1) at +(5,3)
-      coordinate (c2) at +(5,1.75)
-      coordinate (slut) at (2.7,.5)
-      coordinate (top) at (4.2,2);
+   \begin{tikzpicture}[
+         scale=2,
+         IS/.style={blue, thick},
+         LM/.style={red, thick},
+         axis/.style={very thick, ->, >=stealth', line join=miter},
+         important line/.style={thick}, dashed line/.style={dashed, thin},
+         every node/.style={color=black},
+         dot/.style={circle,fill=black,minimum size=4pt,inner sep=0pt,
+               outer sep=-1pt},
+      ]
+      % axis
+      \draw[axis,<->] (2.5,0) node(xline)[right] {$Y$} -|
+                     (0,2.5) node(yline)[above] {$i$};
+      % IS-LM diagram
+      \draw[LM] (0.2,0.3) coordinate (LM_1) parabola (1.8,1.8)
+         coordinate (LM_2) node[above] {\LM};
+      \draw[IS] (0.2,1.8) coordinate (IS_1) parabola[bend at end]
+            (1.8,.3) coordinate (IS_2) node[right] {\IS};
+      %Intersection is calculated "manually" since Tikz does not offer
+      %intersection calculation for parabolas
+      \node[dot,label=above:$A$] at (1,.68) (int1) {};
+      %shifted IS-LM diagram
+      \draw[xshift=.7cm, LM, red!52] (0.2,0.2) parabola (1.8,1.7)
+         node[above] {\LM'};
+      \draw[xshift=.4cm, yshift=.3cm, IS, blue!60] (0.2,1.8)
+         parabola[bend at end] (1.8,.3)
+         node[right] {\IS'};
+      %Intersection of shifted IS-LM
+      \path[xshift=.36cm, yshift=.35cm] (.98,.7)
+         node[dot,label=above:{$B$}] (int2) {};
+      \path[xshift=.805cm] (1,.68) node[dot,label=above:$C$] (int3) {};
+      %arrows between intersections
+      \draw[->, very thick, black, >=stealth']
+         ($(int1)+1/2*(-.80,1)$) -- ($(int2)+1/2*(-.8,1)$)
+         node[sloped, above, midway] {$\mathsmaller{\Delta G > 0}$};
+      \draw[->, very thick, black, >=stealth']
+         ($(int2)+2*(.14,.2)$) -- ($(int2)!.2cm!270:(int2)+(.9,0)$)
+         node[sloped,above, midway] {$\mathsmaller{\Delta M>0}$};
+         
+      \begin{scope}[xshift=4cm]
+         %E-diagram
+         \draw[axis,<->] (0,2.5) node(eyline)[above] {$i$} |-
+                           (2.5,0) node(exline)[right] {$E$};
 
-      \draw[important line] (start) .. controls (c1) and (c2) .. (slut);
-      % Help coordinates for drawing the curve
-      % \filldraw [black] 
-      % (start) circle (2pt)
-      % (c1) circle (2pt)
-      % (c2) circle (2pt)
-      % (slut) circle (2pt)
-      \filldraw [black] 
-      (top) circle (2pt) node[above right, black] {$Q$};
+         \draw[important line, green, xshift=.5cm]
+               (.2,.2) coordinate (es) -- (1.5,1.5) coordinate (ee)
+               node [above right] {Interest rate parity};
+      \end{scope}
+      %Lines connecting IS LM coordinates and E coordinates
+      \draw[dashed] 
+         let
+               % Store the intersection point in \p1 for later retrieval. 
+               % A convenient feature of the let operation is that we can
+               % access the x and y component of the coordinate directly 
+               % using the \x1 and \y1 syntax. 
+               \p1=(intersection of int2--[xshift=1]int2 and es--ee)
+         in
+               (0,\y1) node[left]{$i'$} -|  (\x1,0)
+               node[pos=0.5,dot,label=above:$B'$] {} node[below] {$E'$};
 
-      % We start the second graph
-      \begin{scope}[xshift=6cm]
-         % Axis
-         \coordinate (y2) at (0,5);
-         \coordinate (x2) at (5,0);
-         \draw[axis] (y2) node[above] {$r$} -- (0,0) --  (x2) node[right] {$L$};
-         % Define some coodinates
-      \path
-      let
-      \p1=(top)
-      in
-      coordinate (sstart) at (1,.5) 
-      coordinate (sslut) at (4, 4.5)
-      coordinate (dstart) at (4,.5)
-      coordinate (dslut) at (1,4.5)
-   % Intersection 1
-      coordinate (int) at  (intersection cs:
-         first line={(sstart)--(sslut)},
-         second line={(dstart)--(dslut)})
-   % Intersection 2
-      coordinate (int2) at  (intersection cs:
-         first line={(top)--($(10,\y1)$)},
-         second line={(dstart)--(dslut)})
-   % Intersection 3
-      coordinate (int3) at  (intersection cs:
-         first line={(top)--($(10,\y1)$)},
-         second line={(sstart)--(sslut)});
-   % Draw the lines
-      \draw[important line] (sstart) -- (sslut) node[above right] {$S$}
-         (dstart) -- (dslut)  node[above left] {$D$};
-      \draw[connection] let \p1=(int2), \p2=(int3) in 
-      (int2)--(\x1,0) node[below] {$\mathit{L_D}$}
-      (int3)--(\x2,0) node[below] {$\mathit{L_S}$};
-         \end{scope}
-   %Finally, connect the two graphs
-      \draw[connection] let \p1=(top), \p2=(x2) in (0,\y1) node[left]
-      {$r^*$} -- (\x2, \y1);
-      \end{tikzpicture}
+      \draw[dashed line] let
+         \p1=(intersection of int3--[xshift=1]int3 and es--ee)
+               in
+         (0,\y1) node[left]{$i\phantom{'}$} -| (\x1,0)
+         node[dot,label=above:$C'$,pos=0.5] {} node[below] {$E$};
+
+   \end{tikzpicture}
    \end{document}
 
 +----------+----------+
