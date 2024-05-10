@@ -31,9 +31,13 @@ beautiful mathematical formulas.
 .. tikz:: 
 
    \begin{tikzpicture}
-      \node (a) {Hello};
-      \node (b) [below of=a] {World};
-      \draw [->] (a) -- (b) node [midway, fill=white] {Arrow};
+      \begin{axis}[
+         axis lines=middle,
+         xlabel={$x$},
+         ylabel={$y$},
+      ]
+      \addplot[domain=-3:3, samples=50, smooth, blue] {x^2};
+      \end{axis}
    \end{tikzpicture}
 
 +----------+----------+
