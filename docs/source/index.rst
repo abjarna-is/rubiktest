@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to rubiktest-projectname's documentation by abjarna!
-=================================================
+==============================================================
 
 Smá meira test.
 
@@ -17,6 +17,17 @@ Euler's identity, equation :eq:`euler`, was elected one of the most
 beautiful mathematical formulas.
 
 :math:`\underline{x}=[  x_{1}, ...,  x_{n}]^{T}`
+
+.. admonition:: Dæmi og lausn
+   :class: tip
+
+   Hér er dæmi og lausn
+
+.. admonition:: Annað dæmi og lausn sem er hægt að opna og loka
+   :class: tip dropdown
+
+   Hér er annað dæmi og lausn
+
 
 +----------+----------+
 | Header 1 | Header 2 |
@@ -32,8 +43,6 @@ beautiful mathematical formulas.
    :maxdepth: 2
    :caption: Contents:
 
-   subpage1
-   subpage2
 
 
 
