@@ -35,7 +35,7 @@ tikz_latex_preamble = r'''
 \usepackage{caption}
 
 \pgfplotsset{compat=1.18}
-\usetikzlibrary{arrows,patterns,plotmarks,calc,3d,matrix,positioning,shapes.geometric}
+\usetikzlibrary{arrows,patterns,plotmarks,calc,3d,matrix,positioning,arrows.meta,shapes.geometric}
 '''
 tikz_output_format = 'png'
 
