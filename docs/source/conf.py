@@ -15,8 +15,22 @@ release = '0.1.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinx_togglebutton'
+    'sphinx_togglebutton',
+    'sphinxcontrib.tikz',
 ]
+
+# Configuration for sphinxcontrib-tikz
+tikz_proc_suite = 'GhostScript'
+tikz_transparent = True
+tikz_latex_preamble = r'''
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows,patterns}
+'''
+tikz_output_format = 'svg'
+
+
 
 
 templates_path = ['_templates']
@@ -29,3 +43,6 @@ exclude_patterns = []
 
 html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
+
+
+

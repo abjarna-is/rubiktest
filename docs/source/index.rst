@@ -28,6 +28,14 @@ beautiful mathematical formulas.
 
    Hér er annað dæmi og lausn
 
+.. tikz:: 
+
+   \begin{tikzpicture}
+       \node (a) {Hello};
+       \node (b) [below of=a] {World};
+       \draw [->] (a) -- (b);
+   \end{tikzpicture}
+
 
 +----------+----------+
 | Header 1 | Header 2 |

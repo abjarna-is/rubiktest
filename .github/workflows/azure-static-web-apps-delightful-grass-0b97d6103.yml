@@ -30,6 +30,15 @@ jobs:
         run: |
           pip install pydata-sphinx-theme
 
+
+      - name: Setup LaTeX
+        run: |
+          sudo apt-get install texlive texlive-latex-extra texlive-fonts-recommended dvipng
+      - name: Install Python Dependencies
+        run: |
+          pip install sphinx sphinxcontrib-tikz
+
+
       - name: Build Sphinx Documentation
         run: |
           sphinx-build -b html docs/source docs/build
