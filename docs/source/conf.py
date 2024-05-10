@@ -20,7 +20,7 @@ extensions = [
 ]
 
 # Configuration for sphinxcontrib-tikz
-tikz_proc_suite = 'ImageMagick'
+tikz_proc_suite = 'GhostScript'
 tikz_transparent = True
 tikz_latex_preamble = r'''
 \usepackage{tikz}

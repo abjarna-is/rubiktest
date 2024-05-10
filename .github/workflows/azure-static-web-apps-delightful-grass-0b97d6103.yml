@@ -37,8 +37,7 @@ jobs:
       - name: Install Python Dependencies
         run: |
           pip install sphinx sphinxcontrib-tikz
-      - name: Install ImageMagick
-        run: sudo apt-get install -y imagemagick
+
 
       - name: Build Sphinx Documentation
         run: |
