@@ -33,16 +33,13 @@ beautiful mathematical formulas.
 .. tikz:: 
 
 \begin{tikzpicture}
-    \node[draw, rectangle] (a) {Start};
-    \node[draw, circle, right=of a] (b) {Step 1};
-    \node[draw, diamond, aspect=2, right=of b] (c) {Decision};
-    \node[draw, rectangle, right=of c] (d) {Step 2};
-    \node[draw, rectangle, below=of c] (e) {End};
-    
-    \draw[->] (a) -- (b);
-    \draw[->] (b) -- (c);
-    \draw[->] (c) -- node[above] {yes} (d);
-    \draw[->] (c) -- node[right] {no} (e);
+    \begin{axis}[
+        axis lines=middle,
+        xlabel={$x$},
+        ylabel={$y$},
+    ]
+    \addplot[domain=-3:3, samples=50, smooth, blue] {x^2};
+    \end{axis}
 \end{tikzpicture}
 
 +----------+----------+
