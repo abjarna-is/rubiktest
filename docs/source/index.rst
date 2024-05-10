@@ -30,8 +30,7 @@ beautiful mathematical formulas.
 
 .. tikz:: 
 
-   \begin{document}
-   \begin{tikzpicture}
+   \begin{tikzpicture}[scale=0.5]
       \node[draw, rectangle] (a) {Start};
       \node[draw, circle, right=of a] (b) {Step 1};
       \node[draw, diamond, aspect=2, right=of b] (c) {Decision};  % Corrected aspect ratio
@@ -43,8 +42,7 @@ beautiful mathematical formulas.
       \draw[->] (c) -- node[above] {yes} (d);
       \draw[->] (c) -- node[right] {no} (e);
    \end{tikzpicture}
-   \end{document}
-   
+
 +----------+----------+
 | Header 1 | Header 2 |
 +==========+==========+
