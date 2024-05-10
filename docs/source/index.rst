@@ -30,102 +30,73 @@ beautiful mathematical formulas.
 
 .. tikz:: 
 
-   \begin{document} 
+   \begin{document}
+   \begin{tikzpicture}[scale=1]
+      % Axis
+      \coordinate (y) at (0,5);
+      \coordinate (x) at (5,0);
+      \draw[<->] (y) node[above] {$r$} -- (0,0) --  (x) node[right]
+      {$\mathit{EV}$};
+      % A grid can be useful when defining coordinates
+      % \draw[step=1mm, gray, thin] (0,0) grid (5,5); 
+      % \draw[step=5mm, black] (0,0) grid (5,5); 
 
-   \begin{figure}[ht]
-      \centering
-      \pgfmathsetmacro{\BarOffset}{0.15}
+      % Let us define some coordinates
+      \path
+      coordinate (start) at (0,4)
+      coordinate (c1) at +(5,3)
+      coordinate (c2) at +(5,1.75)
+      coordinate (slut) at (2.7,.5)
+      coordinate (top) at (4.2,2);
 
-      \pgfplotsset{
-      % define a new style to use on both axis environments
-      MyAxis/.style={
-               ybar,
-               scale only axis,
-               width=12cm,
-               height=8cm,
-               ymin=0,
-               xmin=-0.5,
-               xmax=7.5, % you need to increase this if you add more data
-               area legend,
-               bar width=10pt
-         }
-      }
+      \draw[important line] (start) .. controls (c1) and (c2) .. (slut);
+      % Help coordinates for drawing the curve
+      % \filldraw [black] 
+      % (start) circle (2pt)
+      % (c1) circle (2pt)
+      % (c2) circle (2pt)
+      % (slut) circle (2pt)
+      \filldraw [black] 
+      (top) circle (2pt) node[above right, black] {$Q$};
 
-      \pgfplotstableread{
-         %Returns         %Sharpe
-      0 6.4              0.232      
-      1 4.5              0.279      
-      2 12.8             0.397      
-      3 4.4              0.279   
-      4 13.6             0.462
-      5 6.5              0.221
-      6 11.1             0.337
-      7 9.4              0.377
-
-      }\dataset
-
-      \begin{tikzpicture}
-      \begin{axis}[
-         title= \Large{Average annual returns and Sharpe ratios for value and growth portfolios},
-         ylabel={Average annual return (\%)},
-         ymax=16,
-         ymajorgrids=true,
-         xtick={0,...,7},
-         xtick pos=left,
-         ytick pos=left,
-         xticklabels = {
-            Value,
-            Growth,
-            Value,
-            Growth,
-            Value,
-            Growth,
-            Value,
-            Growth
-         },
-         yticklabel style={xshift=-0.5ex},
-         tickwidth=5pt,
-         extra x ticks={-0.5,1.5,...,3.5,5.5,7.5},
-         extra x tick labels={},
-         extra x tick style={tickwidth=1.2cm},
-         minor x tick style = {opacity=0},
-         MyAxis\begin{tikzpicture}
-      \node[draw, rectangle] (a) {Rectangle};
-      \node[draw, circle, blue, below of=a] (b) {Circle};
-      \draw[->, thick, red] (a) -- (b);
-   \end{tikzpicture}
-      ]
-      \addplot[draw=black,fill=black!20] table[x expr=\coordindex-\BarOffset,y index=1] \dataset; %Return
-      \label{returnplot}
-      \end{axis}
-
-      \begin{axis}[
-         name=ax2,
-         ymax=0.5,
-         MyAxis,
-         ylabel=Average Sharpe ratio,
-         ytick pos=right,
-         yticklabel style={xshift=0.5ex},
-         clip=false,
-         xtick={0.5,2.5,4.5,6.5},
-         xticklabels={P/E ratio, P/B ratio, P/C ratio, P/S ratio},
-         xticklabel style={yshift=-5mm},
-         tickwidth=5pt,
-         xtick style={draw=none}
-      ]
-      \addplot[draw=black,fill=black!40] table[x expr=\coordindex+\BarOffset,y index=2] \dataset; %Sharpe ratio
-      \label{ratioplot}
-
-      \end{axis}
-
-      % legend
-      \node [below=1.3cm] at (ax2.south) {\ref{returnplot} Return \quad \ref{ratioplot} Sharpe ratio};
+      % We start the second graph
+      \begin{scope}[xshift=6cm]
+         % Axis
+         \coordinate (y2) at (0,5);
+         \coordinate (x2) at (5,0);
+         \draw[axis] (y2) node[above] {$r$} -- (0,0) --  (x2) node[right] {$L$};
+         % Define some coodinates
+      \path
+      let
+      \p1=(top)
+      in
+      coordinate (sstart) at (1,.5) 
+      coordinate (sslut) at (4, 4.5)
+      coordinate (dstart) at (4,.5)
+      coordinate (dslut) at (1,4.5)
+   % Intersection 1
+      coordinate (int) at  (intersection cs:
+         first line={(sstart)--(sslut)},
+         second line={(dstart)--(dslut)})
+   % Intersection 2
+      coordinate (int2) at  (intersection cs:
+         first line={(top)--($(10,\y1)$)},
+         second line={(dstart)--(dslut)})
+   % Intersection 3
+      coordinate (int3) at  (intersection cs:
+         first line={(top)--($(10,\y1)$)},
+         second line={(sstart)--(sslut)});
+   % Draw the lines
+      \draw[important line] (sstart) -- (sslut) node[above right] {$S$}
+         (dstart) -- (dslut)  node[above left] {$D$};
+      \draw[connection] let \p1=(int2), \p2=(int3) in 
+      (int2)--(\x1,0) node[below] {$\mathit{L_D}$}
+      (int3)--(\x2,0) node[below] {$\mathit{L_S}$};
+         \end{scope}
+   %Finally, connect the two graphs
+      \draw[connection] let \p1=(top), \p2=(x2) in (0,\y1) node[left]
+      {$r^*$} -- (\x2, \y1);
       \end{tikzpicture}
-
-      \captionsetup{labelfont=bf, format=plain, labelformat=default}
-      \caption{Average annual returns and Sharpe ratios for value and growth portfolios in the period 1992-2017, portfolios were created using different financial ratios.}
-      \label{fig:overview}
-      \end{figure}
    \end{document}
 
 +----------+----------+

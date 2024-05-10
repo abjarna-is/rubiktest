@@ -34,6 +34,15 @@ tikz_latex_preamble = r'''
 \usepackage{pgfplotstable}
 \usepackage{caption}
 \usetikzlibrary{arrows,patterns,plotmarks,calc,3d,matrix,positioning,arrows.meta,shapes.geometric}
+\tikzset{
+%Define standard arrow tip
+>=stealth',
+%Define style for different line styles
+help lines/.style={dashed, thick},
+axis/.style={<->},
+important line/.style={thick},
+connection/.style={thick, dotted},
+}
 \pgfplotsset{compat=1.18}
 '''
 tikz_output_format = 'png'
