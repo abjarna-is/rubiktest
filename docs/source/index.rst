@@ -38,7 +38,6 @@ beautiful mathematical formulas.
        \draw [->] (a) -- (b);
    \end{tikzpicture}
 
-
 +----------+----------+
 | Header 1 | Header 2 |
 +==========+==========+

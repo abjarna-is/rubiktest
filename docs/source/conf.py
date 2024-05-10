@@ -26,7 +26,7 @@ tikz_latex_preamble = r'''
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
-\usetikzlibrary{arrows,patterns}
+\usetikzlibrary{arrows,patterns,plotmarks,calc,3d,matrix}
 '''
 tikz_output_format = 'svg'
 
