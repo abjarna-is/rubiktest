@@ -4,16 +4,38 @@
    contain the root `toctree` directive.
 
 Welcome to rubiktest-projectname's documentation by abjarna!
-=================================================
+==============================================================
 
 Smá meira test.
 
-Since Pythagoras, we know that :math:`a^2 + b^2 = c^2`.
+.. note::
+    :class: dropdown
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Pythagoras, we know that Since Pythagoras, we know that Since
+Pythagoras, we know that :math:`a^2 + b^2 = c^2`. Since Pythagoras, we know that 
+Since Pythagoras, we know that Since Pythagoras, we know that
+Since Pythagoras, we know that :math:`\frac{a}{b} = 2` Since Pythagoras 
 
 .. math:: e^{i\pi} + 1 = 0
    :label: euler
 
+
+.. admonition:: Dæmi
+   :class: todo
+
+   Here's some text.
+
 Euler's identity, equation :eq:`euler`, was elected one of the most
+beautiful mathematical formulas.
+
+.. math::
+   x+1=2 \\
+   x=2-1
+   :label: euler2
+
+Euler's identity, equation :eq:`euler2`, was elected one of the most
 beautiful mathematical formulas.
 
 :math:`\underline{x}=[  x_{1}, ...,  x_{n}]^{T}`

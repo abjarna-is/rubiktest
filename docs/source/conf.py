@@ -14,7 +14,10 @@ release = '0.1.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    # [...]
+    "sphinx_togglebutton"
+]
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -26,3 +29,9 @@ exclude_patterns = []
 
 html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
+
+
+latex_engine = 'xelatex'
+latex_documents = [
+    ('index', 'ProjectName.tex', 'Project Documentation', 'Your Name', 'manual'),
+]
