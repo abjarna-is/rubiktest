@@ -30,8 +30,6 @@ beautiful mathematical formulas.
 
 .. tikz:: 
 
-.. tikz:: 
-
    \begin{tikzpicture}
       \node (a) {Hello};
       \node (b) [below of=a] {World};
