@@ -28,7 +28,17 @@ beautiful mathematical formulas.
 
    Hér er annað dæmi og lausn
 
-.. tikz::
+.. admonition:: Dæmi og lausn
+   :class: tip
+
+   .. tikz:: lkj lkj lkj lkj lkj lkj lkjlkjlkjlkj lkj lkj lkj lk jlkj lkj lk jlkj lkj lkJ LKJ
+      :align: left
+      :include: _tex/test.tex
+
+Hér er (reyndar ekki) hægt að vísa í mynd 1.
+
+.. tikz:: lkj lkj lkj lkj lkj lkj lkjlkjlkjlkj lkj lkj lkj lk jlkj lkj lk jlkj lkj lkJ LKJ
+   :align: left
    :include: _tex/test.tex
 
 +----------+----------+
