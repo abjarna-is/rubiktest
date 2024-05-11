@@ -22,8 +22,17 @@ extensions = [
 # Configuration for sphinxcontrib-tikz
 tikz_proc_suite = 'pdf2svg'
 tikz_latex_preamble = r"""
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{pgfplots}
 \pgfplotsset{compat=newest}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usetikzlibrary{arrows.meta, patterns, plotmarks, shapes.geometric, decorations.pathmorphing, decorations.text, graphs, positioning, calc, 3d}
+\geometry{a4paper, margin=1in}
 """
 tikz_output_format = 'svg'
 tikz_tikzlibraries = 'pgfplots.groupplots'
