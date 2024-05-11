@@ -29,7 +29,6 @@ beautiful mathematical formulas.
    Hér er annað dæmi og lausn
 
 .. tikz::
-   :stringsubst:
    \begin{axis}
    \addplot3[samples=10] {x^2 - y^2};
    \end{axis}
