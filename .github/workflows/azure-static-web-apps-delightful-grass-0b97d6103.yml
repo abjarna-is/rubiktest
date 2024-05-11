@@ -31,9 +31,11 @@ jobs:
           pip install pydata-sphinx-theme
 
 
-      - name: Setup LaTeX
+      - name: Install LaTeX and PDF2SVG
         run: |
-          sudo apt-get install texlive texlive-latex-extra texlive-fonts-recommended dvipng
+          sudo apt-get update
+          sudo apt-get install -y texlive texlive-latex-extra texlive-fonts-recommended dvipng pdf2svg
+
       - name: Install Python Dependencies
         run: |
           pip install sphinx sphinxcontrib-tikz

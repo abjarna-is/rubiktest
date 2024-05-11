@@ -29,9 +29,7 @@ beautiful mathematical formulas.
    Hér er annað dæmi og lausn
 
 .. tikz::
-   \begin{axis}
-   \addplot3[samples=10] {x^2 - y^2};
-   \end{axis}
+   :include: _tex/test.tex
 
 +----------+----------+
 | Header 1 | Header 2 |

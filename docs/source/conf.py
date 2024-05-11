@@ -20,32 +20,15 @@ extensions = [
 ]
 
 # Configuration for sphinxcontrib-tikz
-tikz_proc_suite = 'GhostScript'
-tikz_transparent = True
-tikz_latex_preamble = r'''
-\usepackage{tikz}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
-\usepackage{amsmath}
-\usepackage{graphicx}
+tikz_proc_suite = 'pdf2svg'
+tikz_latex_preamble = r"""
 \usepackage{pgfplots}
-\usepackage{pgfplotstable}
-\usepackage{caption}
-\usetikzlibrary{arrows,patterns,plotmarks,calc,3d,matrix,positioning,arrows.meta,shapes.geometric}
-\tikzset{
-%Define standard arrow tip
->=stealth',
-%Define style for different line styles
-help lines/.style={dashed, thick},
-axis/.style={<->},
-important line/.style={thick},
-connection/.style={thick, dotted},
-}
-\pgfplotsset{compat=1.18}
-'''
-tikz_output_format = 'png'
+\pgfplotsset{compat=newest}
+"""
+tikz_output_format = 'svg'
+tikz_tikzlibraries = 'pgfplots.groupplots'
+tikz_externalize = True
+tikz_latex_args = [r"-shell-escape"]
 
 
 
