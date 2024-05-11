@@ -18,6 +18,27 @@ beautiful mathematical formulas.
 
 :math:`\underline{x}=[  x_{1}, ...,  x_{n}]^{T}`
 
+  Setjum :math:`b_y=-6b_x` inn og fáum:
+
+.. math::
+   9 = \sqrt{b_x^2+b_y^2}
+
+.. math::
+   \begin{aligned}
+   9 &= \sqrt{b_x^2+b_y^2}\\
+   &=\sqrt{b_x^2+(-6b_x)^2} \\
+   &= \sqrt{b_x^2+36b_x^2} \\
+   &=\sqrt{37b_x^2} \\
+   &=b_x\sqrt{37} \\
+   b_x&=\frac{9}{\sqrt{37}} \approx 1.480\\
+   b_y&= -6b_x = \frac{-54}{\sqrt{37}} \approx -8.878
+   \end{aligned}
+
+Vigur sem er samsíða :math:`\overline{a}=(-1,6)` og hefur lengdina 9 er því
+
+.. math::
+   \overline{b}= \begin{pmatrix} \frac{9}{\sqrt{37}} \\  \frac{-54}{\sqrt{37}} \end{pmatrix}
+
 .. admonition:: Dæmi og lausn
    :class: tip
 

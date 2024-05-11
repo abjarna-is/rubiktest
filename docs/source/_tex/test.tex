@@ -1,9 +1,8 @@
-\begin{tikzpicture}[scale=1.5]
-    \begin{axis}[
-        xlabel=$x$,
-        ylabel={$f(x) = x^2 - x +4$}
-    ]
-    % use TeX as calculator:
-    \addplot {x^2 - x +4};
-    \end{axis}
+\begin{tikzpicture}
+    \begin{polaraxis}
+    \addplot+[mark=none,domain=0:720,samples=600] 
+        {sin(2*x)*cos(2*x)}; 
+    % equivalent to (x,{sin(..)cos(..)}), i.e.
+    % the expression is the RADIUS
+    \end{polaraxis}
 \end{tikzpicture}

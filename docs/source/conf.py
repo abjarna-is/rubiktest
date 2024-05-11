@@ -26,12 +26,13 @@ tikz_latex_preamble = r"""
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{pgfplots}
-\pgfplotsset{compat=newest}
+\pgfplotsset{compat=1.17}
 \usepackage{amsmath, amsfonts, amssymb}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{geometry}
+\usepgfplotslibrary{patchplots, polar}
 \usetikzlibrary{arrows.meta, patterns, plotmarks, shapes.geometric, decorations.pathmorphing, decorations.text, graphs, positioning, calc, 3d}
 \geometry{a4paper, margin=1in}
 """
