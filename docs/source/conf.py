@@ -22,6 +22,7 @@ extensions = [
 # Configuration for sphinxcontrib-tikz
 tikz_proc_suite = 'pdf2svg'
 tikz_latex_preamble = r"""
+\usepackage{transparent}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{pgfplots}

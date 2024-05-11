@@ -1,9 +1,10 @@
 \begin{tikzpicture}
     \begin{axis}[
         xlabel=$x$,
-        ylabel={$f(x) = x^2 - x +4$}
+        ylabel={$f(x) = x^2 - x +4$},
+        axis background/.style={fill=none},  % Make axis background transparent
+        ticklabel style={fill=none},  % Ensure tick labels do not have filled backgrounds
     ]
-    % use TeX as calculator:
     \addplot {x^2 - x +4};
     \end{axis}
 \end{tikzpicture}
