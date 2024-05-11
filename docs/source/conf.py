@@ -20,7 +20,7 @@ extensions = [
 ]
 
 # Configuration for sphinxcontrib-tikz
-tikz_proc_suite = 'GhostScript'
+tikz_proc_suite = 'pdf2svg'
 tikz_transparent = True
 tikz_latex_preamble = r'''
 \usepackage{tikz}
@@ -45,7 +45,7 @@ connection/.style={thick, dotted},
 }
 \pgfplotsset{compat=1.18}
 '''
-tikz_output_format = 'png'
+tikz_output_format = 'svg'
 
 
 
