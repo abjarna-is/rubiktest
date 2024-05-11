@@ -37,7 +37,7 @@ beautiful mathematical formulas.
 
 Hér er (reyndar ekki) hægt að vísa í mynd 1.
 
-.. tikz:: lkj lkj lkj lkj lkj lkj lkjlkjlkjlkj lkj lkj lkj lk jlkj lkj lk jlkj lkj lkJ LKJ
+.. tikz::
    :align: left
    :include: _tex/test.tex
 
