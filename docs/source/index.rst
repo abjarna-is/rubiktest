@@ -31,16 +31,24 @@ beautiful mathematical formulas.
 .. tikz:: 
 
    \begin{tikzpicture}
-      \node[draw, rectangle] (a) {ab};
-      \node[draw, circle, right=of a] (b) {Step 1};
-      \node[draw, diamond, aspect=2, right=of b] (c) {Decision};  % Corrected aspect ratio
-      \node[draw, rectangle, right=of c] (d) {Step 2};
-      \node[draw, rectangle, below=of c] (e) {End};
-      
-      \draw[->] (a) -- (b);
-      \draw[->] (b) -- (c);
-      \draw[->] (c) -- node[above] {yes} (d);
-      \draw[->] (c) -- node[right] {no} (e);
+      \begin{axis}
+      \addplot3[patch,patch refines=3,
+         shader=faceted interp,
+         patch type=biquadratic] 
+      table[z expr=x^2-y^2]
+      {
+         x  y
+         -2 -2
+         2  -2
+         2  2
+         -2 2
+         0  -2
+         2  0
+         0  2
+         -2 0
+         0  0
+      };
+      \end{axis}
    \end{tikzpicture}
 
 +----------+----------+
