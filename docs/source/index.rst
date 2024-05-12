@@ -6,7 +6,7 @@
 Welcome to rubiktest-projectname's documentation by abjarna!
 ==============================================================
 
-Smá meira testing test.
+Smá meira testing test. Hér verður flott síða.
 
 Since Pythagoras, we know that :math:`a^2 + b^2 = c^2`.
 
