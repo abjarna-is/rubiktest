@@ -4,6 +4,6 @@ Kóði til að láta transparent hluta af SVG eða PNG myndum í pydata theme-in
 */
 
 html[data-theme='dark'] .bd-content img[src*=".svg"]:not(.only-dark):not(.dark-light) {
-    filter: none;  /* Remove filter effects that alter appearance */
+    filter: invert(100%);  /* Remove filter effects that alter appearance */
     background: transparent; /* Ensure background is transparent */
 }
