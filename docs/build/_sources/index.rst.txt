@@ -18,7 +18,7 @@ beautiful mathematical formulas.
 
 :math:`\underline{x}=[  x_{1}, ...,  x_{n}]^{T}`
 
-  Setjum :math:`b_y=-6b_x` inn og fáum:
+Setjum :math:`b_y=-6b_x` inn og fáum:
 
 .. math::
    9 = \sqrt{b_x^2+b_y^2}
@@ -86,9 +86,9 @@ Verðgólf inn í RST
       \coordinate (sfq) at  ({(\pfc-\sint)/(\sslp)},0);
       \coordinate (sfp) at  ({(\pfc-\sint)/(\sslp)},{\pfc});
    % DEMAND
-      \draw[thick,color=blue] plot (\demand) node[right] {$P(q) = -\frac{1}{2}q+\frac{9}{2}$};
+      \draw[thick,color=blue] plot (\demand) node[right] {Eftirspurn: $P(q) = -\frac{1}{2}q+\frac{9}{2}$};
    % SUPPLY
-      \draw[thick,color=purple] plot (\supply) node[right] {Supply};
+      \draw[thick,color=purple] plot (\supply) node[right] {Framboð};
    % Draw axes, and dotted equilibrium lines.
       \draw[->] (0,0) -- (6.2,0) node[right] {$Q$};
       \draw[->] (0,0) -- (0,6.2) node[above] {$P$};
@@ -96,7 +96,7 @@ Verðgólf inn í RST
       \draw[dashed,color=black] plot (\x,{\pfc}) node[right] {$P_c$};
       \draw[dashed] (pfp) -- (pfq) node[below] {$Q_d$};
       \draw[dashed] (sfp) -- (sfq) node[below] {$Q_s$};
-   \draw[->,baseline=5] ($(0,{\pfc})+(-1.5,0.7)$) node[label= left:Price Ceiling] {} -- ($(0,{\pfc})+(-.1,0.1)$);
+   \draw[->,baseline=5] ($(0,{\pfc})+(-1.5,0.7)$) node[label= left:Verðgólf] {} -- ($(0,{\pfc})+(-.1,0.1)$);
    \end{tikzpicture}
 
 test2.tex
