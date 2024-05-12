@@ -1,8 +1,0 @@
-{
-  "globalHeaders": {
-    "Content-Type": "text/plain; charset=UTF-8"
-  },
-  "mimeTypes": {
-    ".txt": "text/plain; charset=UTF-8"
-  }
-}
