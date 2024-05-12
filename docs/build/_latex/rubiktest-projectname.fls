@@ -369,6 +369,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/transparent/transparent-nomet
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/auxhook/auxhook.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/auxhook/auxhook.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex

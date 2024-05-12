@@ -117,6 +117,12 @@ test_table.tex
    :align: left
    :include: _tex/test_table.tex
 
+test_table2.tex
+
+.. tikz::
+   :align: left
+   :include: _tex/test_table2.tex
+
 +----------+----------+
 | Header 1 | Header 2 |
 +==========+==========+

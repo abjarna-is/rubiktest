@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.10)  12 MAY 2024 01:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.10)  12 MAY 2024 03:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1013,6 +1013,23 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
+(/usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip86
+\RaggedLeftLeftskip=\skip87
+\RaggedRightLeftskip=\skip88
+\CenteringRightskip=\skip89
+\RaggedLeftRightskip=\skip90
+\RaggedRightRightskip=\skip91
+\CenteringParfillskip=\skip92
+\RaggedLeftParfillskip=\skip93
+\RaggedRightParfillskip=\skip94
+\JustifyingParfillskip=\skip95
+\CenteringParindent=\skip96
+\RaggedLeftParindent=\skip97
+\RaggedRightParindent=\skip98
+\JustifyingParindent=\skip99
+)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplotstable 2021/05/15 v1.18.1 Table typesetting and Pretty-printing
@@ -1024,9 +1041,9 @@ Package: pgfplotstable 2021/05/15 v1.18.1 Table typesetting and Pretty-printing
 .coltype.code.tex)))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip86
+\multirow@colwidth=\skip100
 \multirow@cntb=\count342
-\multirow@dima=\skip87
+\multirow@dima=\skip101
 \bigstrutjot=\dimen355
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -1153,7 +1170,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip88
+\Hy@SectionHShift=\skip102
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
 ts.patchplots.code.tex)
@@ -1363,17 +1380,22 @@ al/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}] [2
 
 ] [2
 
-] [1] [2] [3] [4]
+] [1] [2] [3]
+Overfull \hbox (2.37326pt too wide) in paragraph at lines 383--384
+[]  
+ []
+
+[4] [5] [6
+
+]
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 3
-97.
+LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 4
+28.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tex-gyre/ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
 )
-(./rubiktest-projectname.ind) [5
-
-{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}] (./rub
-iktest-projectname.aux)
+(./rubiktest-projectname.ind) [7{/usr/local/texlive/2024/texmf-dist/fonts/enc/d
+vips/tex-gyre/q-ts1.enc}] (./rubiktest-projectname.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1382,10 +1404,10 @@ Package rerunfilecheck Info: File `rubiktest-projectname.out' has not changed.
 (rerunfilecheck)             Checksum: E81C69F63AD497B126C77C1297BE8A5D;139.
  ) 
 Here is how much of TeX's memory you used:
- 41082 strings out of 474116
- 978960 string characters out of 5743682
+ 41177 strings out of 474116
+ 981118 string characters out of 5743682
  1959187 words of memory out of 5000000
- 62628 multiletter control sequences out of 15000+600000
+ 62717 multiletter control sequences out of 15000+600000
  599318 words of font info for 70 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  99i,23n,101p,754b,1958s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1401,10 +1423,10 @@ ive/2024/texmf-dist/fonts/type1/public/tex-gyre/qhvbi.pfb></usr/local/texlive/2
 024/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb></usr/local/texlive/2024/texmf-di
 st/fonts/type1/public/tex-gyre/qtmr.pfb>
-Output written on rubiktest-projectname.pdf (9 pages, 209550 bytes).
+Output written on rubiktest-projectname.pdf (11 pages, 211025 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

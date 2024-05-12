@@ -6,7 +6,7 @@
 Welcome to rubiktest-projectname's documentation by abjarna!
 ==============================================================
 
-Smá meira test.
+Smá meira testing test.
 
 Since Pythagoras, we know that :math:`a^2 + b^2 = c^2`.
 
@@ -116,6 +116,12 @@ test_table.tex
 .. tikz::
    :align: left
    :include: _tex/test_table.tex
+
+test_table2.tex
+
+.. tikz::
+   :align: left
+   :include: _tex/test_table2.tex
 
 +----------+----------+
 | Header 1 | Header 2 |
