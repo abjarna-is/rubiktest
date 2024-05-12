@@ -17,7 +17,6 @@ release = '0.1.0'
 extensions = [
     'sphinx_togglebutton',
     'sphinxcontrib.tikz',
-    'rst2pdf.pdfbuilder',
 ]
 
 # Configuration for sphinxcontrib-tikz
