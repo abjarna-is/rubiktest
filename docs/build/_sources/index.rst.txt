@@ -52,15 +52,70 @@ Vigur sem er samsíða :math:`\overline{a}=(-1,6)` og hefur lengdina 9 er því
 .. admonition:: Dæmi og lausn
    :class: tip
 
-   .. tikz:: lkj lkj lkj lkj lkj lkj lkjlkjlkjlkj lkj lkj lkj lk jlkj lkj lk jlkj lkj lkJ LKJ
+   .. tikz:: test2.tex -- lkj lkj lkj lkj lkj lkj lkjlkjlkjlkj lkj lkj lkj lk jlkj lkj lk jlkj lkj lkJ LKJ
       :align: left
       :include: _tex/test.tex
 
-Hér er (reyndar ekki) hægt að vísa í mynd 1.
+test.tex
 
 .. tikz::
    :align: left
    :include: _tex/test.tex
+
+Verðgólf inn í RST
+
+.. tikz:: 
+   \begin{tikzpicture}[domain=0:5,scale=1,thick]
+   \usetikzlibrary{calc}   %allows coordinate calculations.
+   %Define linear parameters for supply and demand
+   \def\dint{4.5}          %Y-intercept for DEMAND.
+   \def\dslp{-0.5}         %Slope for DEMAND.
+   \def\sint{1.2}          %Y-intercept for SUPPLY.
+   \def\sslp{0.8}          %Slope for SUPPLY.
+   \def\pfc{2.5}           %Price floor or ceiling
+   \def\demand{\x,{\dslp*\x+\dint}}
+   \def\supply{\x,{\sslp*\x+\sint}}
+   % Define coordinates.
+      \coordinate (ints) at ({(\sint-\dint)/(\dslp-\sslp)},{(\sint-\dint)/(\dslp-\sslp)*\sslp+\sint});
+      \coordinate (ep) at  (0,{(\sint-\dint)/(\dslp-\sslp)*\sslp+\sint});
+      \coordinate (eq) at  ({(\sint-\dint)/(\dslp-\sslp)},0);
+      \coordinate (dint) at (0,{\dint});
+      \coordinate (sint) at (0,{\sint});
+      \coordinate (pfq) at  ({(\pfc-\dint)/(\dslp)},0);
+      \coordinate (pfp) at  ({(\pfc-\dint)/(\dslp)},{\pfc});
+      \coordinate (sfq) at  ({(\pfc-\sint)/(\sslp)},0);
+      \coordinate (sfp) at  ({(\pfc-\sint)/(\sslp)},{\pfc});
+   % DEMAND
+      \draw[thick,color=blue] plot (\demand) node[right] {$P(q) = -\frac{1}{2}q+\frac{9}{2}$};
+   % SUPPLY
+      \draw[thick,color=purple] plot (\supply) node[right] {Supply};
+   % Draw axes, and dotted equilibrium lines.
+      \draw[->] (0,0) -- (6.2,0) node[right] {$Q$};
+      \draw[->] (0,0) -- (0,6.2) node[above] {$P$};
+      %Price floor and ceiling lines
+      \draw[dashed,color=black] plot (\x,{\pfc}) node[right] {$P_c$};
+      \draw[dashed] (pfp) -- (pfq) node[below] {$Q_d$};
+      \draw[dashed] (sfp) -- (sfq) node[below] {$Q_s$};
+   \draw[->,baseline=5] ($(0,{\pfc})+(-1.5,0.7)$) node[label= left:Price Ceiling] {} -- ($(0,{\pfc})+(-.1,0.1)$);
+   \end{tikzpicture}
+
+test2.tex
+
+.. tikz::
+   :align: left
+   :include: _tex/test2.tex
+   
+test3.tex
+
+.. tikz::
+   :align: left
+   :include: _tex/test3.tex
+
+test_table.tex
+
+.. tikz::
+   :align: left
+   :include: _tex/test_table.tex
 
 +----------+----------+
 | Header 1 | Header 2 |

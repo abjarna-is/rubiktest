@@ -1,8 +1,49 @@
-\begin{tikzpicture}
-    \begin{polaraxis}
-    \addplot+[mark=none,domain=0:720,samples=600] 
-        {sin(2*x)*cos(2*x)}; 
-    % equivalent to (x,{sin(..)cos(..)}), i.e.
-    % the expression is the RADIUS
-    \end{polaraxis}
+\begin{tikzpicture}[domain=0:5,scale=1,thick]
+\usetikzlibrary{calc}                                %allows coordinate calculations.
+\usetikzlibrary{decorations.pathreplacing}           %allows drawing curly braces.
+ 
+% Define linear parameters for supply and demand
+\def\dint{4.5}      %Y-intercept for DEMAND.
+\def\dslp{-0.5}     %Slope for DEMAND.
+\def\sint{1.2}      %Y-intercept for SUPPLY.
+\def\sslp{0.8}      %Slope for SUPPLY.
+ 
+\def\tax{1.5}       %Excise (per-unit) tax
+ 
+% Define Supply and Demand Lines as equations of parameters defined above.
+  \def\demand{\x,{\dslp*\x+\dint}}
+  \def\supply{\x,{\sslp*\x+\sint}}
+  \def\demandtwo{\x,{\dslp*\x+\dint+\dsh}}
+  \def\supplytwo{\x,{\sslp*\x+\sint+\ssh}}
+ 
+ 
+% Define coordinates.
+    \coordinate (ints) at ({(\sint-\dint)/(\dslp-\sslp)},{(\sint-\dint)/(\dslp-\sslp)*\sslp+\sint});
+    \coordinate (ep) at  (0,{(\sint-\dint)/(\dslp-\sslp)*\sslp+\sint});
+    \coordinate (eq) at  ({(\sint-\dint)/(\dslp-\sslp)},0);
+    \coordinate (dint) at (0,{\dint});
+    \coordinate (sint) at (0,{\sint});
+ 
+    \coordinate (teq) at  ({(\sint+\tax-\dint)/(\dslp-\sslp)},0); %quantity
+    \coordinate (tep) at  (0,{(\sint+\tax-\dint)/(\dslp-\sslp)*\sslp+\sint+\tax}); %price
+    \coordinate (tint) at  ({(\sint+\tax-\dint)/(\dslp-\sslp)},{(\sint+\tax-\dint)/(\dslp-\sslp)*\sslp+\sint+\tax}); %tax equilibrium
+     
+    \coordinate (sep) at (0,{\sslp*(\sint+\tax-\dint)/(\dslp-\sslp)+\sint});
+    \coordinate (sen) at ({(\sint+\tax-\dint)/(\dslp-\sslp)},{\sslp*(\sint+\tax-\dint)/(\dslp-\sslp)+\sint});   
+ 
+% DEMAND
+    \draw[thick,color=blue] plot (\demand) node[right] {$P(q) = -\frac{1}{2}q+\frac{9}{2}$};
+     
+% SUPPLY
+    \draw[thick,color=purple] plot (\supply) node[right] {Supply};
+ 
+% Draw axes, and dotted equilibrium lines.
+    \draw[->] (0,0) -- (6.2,0) node[right] {$Q$};
+    \draw[->] (0,0) -- (0,6.2) node[above] {$P$};
+    \draw[decorate,decoration={brace},thick]  ($(sep)+(-0.8,0)$) -- ($(tep)+(-0.8,0)$) node[midway,below=-8pt,xshift=-18pt] {tax};
+     
+    \draw[dashed] (tint) -- (teq) node[below] {$Q_T$};                  
+    \draw[dashed] (tint) -- (tep) node[left] {$P_d$};                       
+    \draw[dashed] (sen) -- (sep) node[left] {$P_s$};                        
+         
 \end{tikzpicture}
