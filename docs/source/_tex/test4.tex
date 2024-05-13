@@ -1,0 +1,67 @@
+\begin{tikzpicture}
+\node {\resizebox{1\linewidth}{!}{
+
+
+
+
+
+
+
+
+\begin{tikzpicture}[scale=20]
+\begin{axis}[
+scale = 1.2,
+xmin = 0, xmax = 10,
+ymin = 0, ymax = 10,
+axis lines* = left,
+xtick = {0}, ytick = \empty,
+axis on top,
+clip = false,
+]
+% Colouring areas
+\fill[orange, opacity = 0.1] (0, 7.67) -- (0, 3.67) -- (5.5, 3.67)
+    -- (5.5, 7.67);
+\fill[green, opacity = 0.1] (5.5, 0) -- (5.5, 3.67) -- (7, 3.67)
+-- (7, 0);
+% Supply and demand curves
+\addplot[color = blue, very thick] coordinates {(5,9) (8,1)};
+\addplot[color = red, very thick] coordinates {(3,1) (6,9)};
+\addplot[color = red, opacity = 0.3, very thick] coordinates
+   {(6,1) (9,9)};
+% Dashed lines
+\addplot[color = black, dashed, thick] coordinates {(0, 7.67)
+   (5.5, 7.67) (5.5, 0)};
+\addplot[color = black, dashed, thick] coordinates {(0, 3.67) (7,
+   3.67) (7, 0)};
+% Coordinate points
+\addplot[color = black, mark = *, only marks, mark size = 3pt]
+   coordinates {(5.5, 7.67) (7, 3.67)};
+% Labels
+\node [right] at (rel axis cs:1,0){Farm products, $Q
+   $};
+\node [above] at (rel axis cs:0,1) {Price, $P$};
+\node [right] at (5.5, 7.67) {$E$};
+\node [right] at (7, 3.67) {$E^\prime$};
+\node [right] at (8, 1) {$D$};
+\node [above] at (6, 9) {$S$};
+\node [right] at (9, 9) {$S^\prime$};
+\node [left] at (0, 7.67) {$P_E$};
+\node [left] at (0, 3.67) {$P^\prime$};
+\node [below] at (5.5, 0) {$Q_E$};
+\node [below] at (7, 0) {$Q^\prime$};
+\node [right] at (5, 11) {Total revenue lost};
+\node [above] at (10, -3) {Total revenue gained};
+% Arrows
+\draw[-{Triangle[length = 4mm, width = 2mm]}, red, opacity = 0.3]
+   (6.3, 8.5) to (8.3, 8.5);
+\draw[-Triangle] (5, 11) to [out = 180, in = 90] (2, 6);
+\draw[-Triangle] (10, -1.5)  to [out = 90, in = 0] (6.5, 0.7);
+\end{axis}
+\end{tikzpicture}
+
+
+
+
+   }
+};
+\end{tikzpicture}

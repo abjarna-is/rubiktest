@@ -105,14 +105,22 @@ test2.tex
 test3.tex
 
 .. tikz::
-   :align: left
    :include: _tex/test3.tex
+
+test4.tex
+
+.. tikz::
+   :include: _tex/test4.tex
 
 test_table.tex
 
 .. tikz::
-   :xscale: 5
    :include: _tex/test_table.tex
+
+test_table1.tex
+
+.. tikz::
+   :include: _tex/test_table1.tex
 
 test_table2.tex
 

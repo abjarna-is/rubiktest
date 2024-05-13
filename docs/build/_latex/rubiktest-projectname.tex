@@ -281,7 +281,7 @@ clip = false,
 \end{center}
 \sphinxAtStartPar
 test3.tex
-\begin{flushleft}\begin{tikzpicture}[scale=1]
+\begin{center}\begin{tikzpicture}[scale=1]
 \begin{axis}[
 scale = 1.2,
 xmin = 0, xmax = 10,
@@ -325,11 +325,63 @@ clip = false,
 \draw[-Triangle] (10, -1.5)  to [out = 90, in = 0] (6.5, 0.7);
 \end{axis}
 \end{tikzpicture}
-\end{flushleft}
+\end{center}
+\sphinxAtStartPar
+test4.tex
+\begin{center}\begin{tikzpicture}
+\node {\resizebox{1\linewidth}{!}{
+\begin{tikzpicture}[scale=20]
+\begin{axis}[
+scale = 1.2,
+xmin = 0, xmax = 10,
+ymin = 0, ymax = 10,
+axis lines* = left,
+xtick = {0}, ytick = \empty,
+axis on top,
+clip = false,
+]
+\fill[orange, opacity = 0.1] (0, 7.67) -- (0, 3.67) -- (5.5, 3.67)
+    -- (5.5, 7.67);
+\fill[green, opacity = 0.1] (5.5, 0) -- (5.5, 3.67) -- (7, 3.67)
+-- (7, 0);
+\addplot[color = blue, very thick] coordinates {(5,9) (8,1)};
+\addplot[color = red, very thick] coordinates {(3,1) (6,9)};
+\addplot[color = red, opacity = 0.3, very thick] coordinates
+   {(6,1) (9,9)};
+\addplot[color = black, dashed, thick] coordinates {(0, 7.67)
+   (5.5, 7.67) (5.5, 0)};
+\addplot[color = black, dashed, thick] coordinates {(0, 3.67) (7,
+   3.67) (7, 0)};
+\addplot[color = black, mark = *, only marks, mark size = 3pt]
+   coordinates {(5.5, 7.67) (7, 3.67)};
+\node [right] at (rel axis cs:1,0){Farm products, $Q
+   $};
+\node [above] at (rel axis cs:0,1) {Price, $P$};
+\node [right] at (5.5, 7.67) {$E$};
+\node [right] at (7, 3.67) {$E^\prime$};
+\node [right] at (8, 1) {$D$};
+\node [above] at (6, 9) {$S$};
+\node [right] at (9, 9) {$S^\prime$};
+\node [left] at (0, 7.67) {$P_E$};
+\node [left] at (0, 3.67) {$P^\prime$};
+\node [below] at (5.5, 0) {$Q_E$};
+\node [below] at (7, 0) {$Q^\prime$};
+\node [right] at (5, 11) {Total revenue lost};
+\node [above] at (10, -3) {Total revenue gained};
+\draw[-{Triangle[length = 4mm, width = 2mm]}, red, opacity = 0.3]
+   (6.3, 8.5) to (8.3, 8.5);
+\draw[-Triangle] (5, 11) to [out = 180, in = 90] (2, 6);
+\draw[-Triangle] (10, -1.5)  to [out = 90, in = 0] (6.5, 0.7);
+\end{axis}
+\end{tikzpicture}
+   }
+};
+\end{tikzpicture}
+\end{center}
 \sphinxAtStartPar
 test\_table.tex
-\begin{center}\resizebox{0.05\columnwidth}{!}{\begin{tikzpicture}
-\node {\scalebox{2}{% Scale by factor of 2
+\begin{center}\begin{tikzpicture}
+\node {\scalebox{1}{
 \pgfplotstabletypeset
     [col sep=&,row sep=\\,sci zerofill]
 {
@@ -348,7 +400,30 @@ test\_table.tex
    }
 };
 \end{tikzpicture}
-}\end{center}
+\end{center}
+\sphinxAtStartPar
+test\_table1.tex
+\begin{center}\begin{tikzpicture}
+\node {\resizebox{1\textwidth}{!}{
+\pgfplotstabletypeset
+    [col sep=&,row sep=\\,sci zerofill]
+{
+    level &  dof &    error \\
+    1 &      4 &      2.50000000e-01 \\
+    2 &      16 &     6.25000000e-02 \\
+    3 &      64 &     1.56250000e-02 \\
+    4 &      256 &    3.90625000e-03 \\
+    5 &      1024 &   9.76562500e-04 \\
+    6 &      4096 &   2.44140625e-04 \\
+    7 &      16384 &  6.10351562e-05 \\
+    8 &      65536 &  1.52587891e-05 \\
+    9 &      262144 & 3.81469727e-06 \\
+    10 &     1048576 &9.53674316e-07 \\
+}
+   }
+};
+\end{tikzpicture}
+\end{center}
 \sphinxAtStartPar
 test\_table2.tex
 \begin{center}\begin{tikzpicture}
@@ -359,9 +434,9 @@ test\_table2.tex
         before row=\toprule,after row=\midrule},
     every last row/.style={
         after row=\bottomrule},
-    columns/level/.style={column type={>{\centering\arraybackslash}p{.3\linewidth}}},
-    columns/dof/.style={column type={>{\centering\arraybackslash}p{.3\linewidth}}},
-    columns/error/.style={column type={>{\centering\arraybackslash}p{.3\linewidth}}},
+    columns/level/.style={column type={>{\centering\arraybackslash}p{.3\textwidth}}},
+    columns/dof/.style={column type={>{\centering\arraybackslash}p{.3\textwidth}}},
+    columns/error/.style={column type={>{\centering\arraybackslash}p{.3\textwidth}}},
 ]
 {
     level &  dof &    error \\
