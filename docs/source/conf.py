@@ -17,6 +17,7 @@ release = '0.1.0'
 extensions = [
     'sphinx_togglebutton',
     'sphinxcontrib.tikz',
+    'sphinx.ext.imgmath',
 ]
 
 # Configuration for sphinxcontrib-tikz
@@ -60,6 +61,3 @@ exclude_patterns = []
 html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
 html_css_files = ['custom.css']
-
-
-

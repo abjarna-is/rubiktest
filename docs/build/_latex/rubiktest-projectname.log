@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.10)  13 MAY 2024 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.10)  13 MAY 2024 14:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1379,22 +1379,12 @@ al/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}] [2
 
 ] [2
 
-] [1] [2]
-Overfull \hbox (94.69702pt too wide) in paragraph at lines 280--281
- [] 
- []
-
-[3]
-Overfull \hbox (11.52495pt too wide) in paragraph at lines 327--328
-[]  
- []
-
-[4]
+] [1] [2] [3]
 Overfull \hbox (2.37326pt too wide) in paragraph at lines 381--382
  [] 
  []
 
-[5] [6
+[4] [5] [6
 
 ]
 Chapter 1.
@@ -1415,11 +1405,11 @@ Package rerunfilecheck Info: File `rubiktest-projectname.out' has not changed.
 Here is how much of TeX's memory you used:
  41171 strings out of 474116
  980956 string characters out of 5743682
- 1955187 words of memory out of 5000000
+ 1959187 words of memory out of 5000000
  62711 multiletter control sequences out of 15000+600000
  599318 words of font info for 70 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 99i,23n,101p,754b,1980s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,23n,101p,754b,1976s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
@@ -1432,7 +1422,7 @@ ive/2024/texmf-dist/fonts/type1/public/tex-gyre/qhvbi.pfb></usr/local/texlive/2
 024/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb></usr/local/texlive/2024/texmf-di
 st/fonts/type1/public/tex-gyre/qtmr.pfb>
-Output written on rubiktest-projectname.pdf (11 pages, 211436 bytes).
+Output written on rubiktest-projectname.pdf (11 pages, 211508 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  97 compressed objects within 1 object stream
