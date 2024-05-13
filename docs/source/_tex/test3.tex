@@ -1,4 +1,4 @@
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=1.4]
 \begin{axis}[
 scale = 1.2,
 xmin = 0, xmax = 10,
@@ -27,9 +27,9 @@ clip = false,
 \addplot[color = black, mark = *, only marks, mark size = 3pt]
    coordinates {(5.5, 7.67) (7, 3.67)};
 % Labels
-\node [right] at (current axis.right of origin){Farm products, $Q
+\node [right] at (rel axis cs:1,0){Farm products, $Q
    $};
-\node [above] at (current axis.above origin) {Price, $P$};
+\node [above] at (rel axis cs:0,1) {Price, $P$};
 \node [right] at (5.5, 7.67) {$E$};
 \node [right] at (7, 3.67) {$E^\prime$};
 \node [right] at (8, 1) {$D$};

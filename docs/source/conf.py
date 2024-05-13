@@ -27,6 +27,7 @@ tikz_latex_preamble = r"""
 \usepackage[T1]{fontenc}
 \usepackage{array}
 \usepackage{ragged2e}
+\usepackage{graphicx}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \usepackage{multirow}
@@ -34,12 +35,11 @@ tikz_latex_preamble = r"""
 \pgfplotsset{compat=1.18, plot coordinates/math parser=false}
 \usepackage{amsmath, amsfonts, amssymb}
 \usepackage{xcolor}
-\usepackage{hyperref}
 \usepackage{geometry}
-\usepackage{graphicx}
 \usepgfplotslibrary{patchplots, polar, fillbetween, ternary}
 \usetikzlibrary{arrows.meta, patterns, plotmarks, shapes.geometric, decorations.pathmorphing, decorations.text, graphs, positioning, calc, 3d}
 \geometry{a4paper, margin=1in}
+\usepackage{hyperref}
 """
 tikz_output_format = 'svg'
 tikz_tikzlibraries = 'pgfplots.groupplots'

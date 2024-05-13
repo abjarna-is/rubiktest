@@ -1,4 +1,4 @@
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=1.4]
 \begin{axis}[
 scale = 1.2,
 xmin = 0, xmax = 10,
@@ -32,8 +32,8 @@ clip = false,
 \addplot[color = black, mark = *, only marks, mark size = 3pt]
    coordinates {(3.3, 3.9) (4.7, 4.37)};
 % Labels
-\node [right] at (current axis.right of origin) {$A$};
-\node [above] at (current axis.above origin) {$B$};
+\node [right] at (rel axis cs:1,0) {$A$};
+\node [above] at (rel axis cs:0,1) {$B$};
 \node [above] at (9.1, 0) {$M$};
 \node [above] at (6, 0) {$M^\prime$};
 \node [below] at (4.7, 0) {$Q_A$};
