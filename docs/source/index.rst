@@ -53,13 +53,11 @@ Vigur sem er samsíða :math:`\overline{a}=(-1,6)` og hefur lengdina 9 er því
    :class: tip
 
    .. tikz:: test2.tex -- lkj lkj lkj lkj lkj lkj lkjlkjlkjlkj lkj lkj lkj lk jlkj lkj lk jlkj lkj lkJ LKJ
-      :align: left
       :include: _tex/test.tex
 
 test.tex
 
 .. tikz::
-   :align: left
    :include: _tex/test.tex
 
 Verðgólf inn í RST
@@ -102,7 +100,6 @@ Verðgólf inn í RST
 test2.tex
 
 .. tikz::
-   :align: left
    :include: _tex/test2.tex
    
 test3.tex
@@ -114,13 +111,11 @@ test3.tex
 test_table.tex
 
 .. tikz::
-   :align: left
    :include: _tex/test_table.tex
 
 test_table2.tex
 
 .. tikz::
-   :align: left
    :include: _tex/test_table2.tex
 
 Euler's identity, equation :eq:`euler`, was elected one of the most

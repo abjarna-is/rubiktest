@@ -7,3 +7,16 @@ html[data-theme='dark'] .bd-content img[src*=".svg"]:not(.only-dark):not(.dark-l
     filter: invert(100%);  /* Remove filter effects that alter appearance */
     background: transparent; /* Ensure background is transparent */
 }
+
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.figure img {
+    width: 100%;
+    height: auto;
+}
