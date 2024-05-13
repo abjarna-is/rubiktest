@@ -17,7 +17,6 @@ release = '0.1.0'
 extensions = [
     'sphinx_togglebutton',
     'sphinxcontrib.tikz',
-    'sphinx.ext.imgmath',
 ]
 
 # Configuration for sphinxcontrib-tikz

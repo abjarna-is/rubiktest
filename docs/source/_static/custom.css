@@ -19,3 +19,7 @@ Allar myndir í miðjunni
     justify-content: center;
     text-align: center;
 }
+
+.figure img {
+    width: 2000px
+}

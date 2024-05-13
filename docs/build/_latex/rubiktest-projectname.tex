@@ -328,7 +328,7 @@ clip = false,
 \end{flushleft}
 \sphinxAtStartPar
 test\_table.tex
-\begin{center}\begin{tikzpicture}
+\begin{center}\resizebox{0.05\columnwidth}{!}{\begin{tikzpicture}
 \node {\scalebox{2}{% Scale by factor of 2
 \pgfplotstabletypeset
     [col sep=&,row sep=\\,sci zerofill]
@@ -348,7 +348,7 @@ test\_table.tex
    }
 };
 \end{tikzpicture}
-\end{center}
+}\end{center}
 \sphinxAtStartPar
 test\_table2.tex
 \begin{center}\begin{tikzpicture}

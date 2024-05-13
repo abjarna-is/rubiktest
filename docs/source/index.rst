@@ -111,6 +111,7 @@ test3.tex
 test_table.tex
 
 .. tikz::
+   :xscale: 5
    :include: _tex/test_table.tex
 
 test_table2.tex
