@@ -232,7 +232,7 @@ Verðgólf inn í RST
 \end{tikzpicture}\end{center}
 \sphinxAtStartPar
 test2.tex
-\begin{center}\begin{tikzpicture}
+\begin{center}\begin{tikzpicture}[scale=2]
 \begin{axis}[
 scale = 1.2,
 xmin = 0, xmax = 10,
@@ -261,8 +261,8 @@ clip = false,
     3.9) (0, 3.9)};
 \addplot[color = black, mark = *, only marks, mark size = 3pt]
    coordinates {(3.3, 3.9) (4.7, 4.37)};
-\node [right] at (current axis.right of origin) {$A$};
-\node [above] at (current axis.above origin) {$B$};
+\node [right] at (rel axis cs:1,0) {$A$};
+\node [above] at (rel axis cs:0,1) {$B$};
 \node [above] at (9.1, 0) {$M$};
 \node [above] at (6, 0) {$M^\prime$};
 \node [below] at (4.7, 0) {$Q_A$};
@@ -281,7 +281,7 @@ clip = false,
 \end{center}
 \sphinxAtStartPar
 test3.tex
-\begin{flushleft}\begin{tikzpicture}
+\begin{flushleft}\begin{tikzpicture}[scale=1.4]
 \begin{axis}[
 scale = 1.2,
 xmin = 0, xmax = 10,
@@ -305,9 +305,9 @@ clip = false,
    3.67) (7, 0)};
 \addplot[color = black, mark = *, only marks, mark size = 3pt]
    coordinates {(5.5, 7.67) (7, 3.67)};
-\node [right] at (current axis.right of origin){Farm products, $Q
+\node [right] at (rel axis cs:1,0){Farm products, $Q
    $};
-\node [above] at (current axis.above origin) {Price, $P$};
+\node [above] at (rel axis cs:0,1) {Price, $P$};
 \node [right] at (5.5, 7.67) {$E$};
 \node [right] at (7, 3.67) {$E^\prime$};
 \node [right] at (8, 1) {$D$};
