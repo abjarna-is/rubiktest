@@ -477,12 +477,35 @@ test\_canvas1.tex
 \end{tikzpicture}
    }
 };
-\noindent
-\node[minimum width=\textwidth, minimum height=1mm, anchor=center, fill=gray, opacity=0.3] at (graph.center) {};
+\node[minimum width=\textwidth, minimum height=1mm, anchor=center, fill=gray, opacity=0.3, inner sep=0pt, outer sep=0pt] at (graph.center) {};
 \end{tikzpicture}
 \end{center}
 \sphinxAtStartPar
 test\_canvas2.tex
+\begin{center}\begin{tikzpicture}
+\node (graph) {\resizebox{0.98\textwidth}{!}{
+\begin{tikzpicture}
+    \begin{axis}[
+        xlabel=Cost,
+        ylabel=Error]
+    \addplot[color=red,mark=x] coordinates {
+        (2,-2.8559703)
+        (3,-3.5301677)
+        (4,-4.3050655)
+        (5,-5.1413136)
+        (6,-6.0322865)
+        (7,-6.9675052)
+        (8,-7.9377747)
+    };
+    \end{axis}
+\end{tikzpicture}
+   }
+};
+\node[minimum width=\textwidth, minimum height=1mm, anchor=center, fill=gray, opacity=0.3, inner sep=0pt, outer sep=0pt] at (graph.center) {};
+\end{tikzpicture}
+\end{center}
+\sphinxAtStartPar
+test\_canvas3.tex
 \begin{center}\begin{tikzpicture}
     \begin{axis}[
         xlabel=Cost,
