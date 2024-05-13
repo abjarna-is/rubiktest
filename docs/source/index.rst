@@ -127,6 +127,16 @@ test_table2.tex
 .. tikz::
    :include: _tex/test_table2.tex
 
+test_canvas1.tex
+
+.. tikz::
+   :include: _tex/test_canvas1.tex
+
+test_canvas2.tex
+
+.. tikz::
+   :include: _tex/test_canvas2.tex
+
 Euler's identity, equation :eq:`euler`, was elected one of the most
 
 

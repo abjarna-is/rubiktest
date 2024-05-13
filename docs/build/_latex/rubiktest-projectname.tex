@@ -403,7 +403,8 @@ test\_table.tex
 \end{center}
 \sphinxAtStartPar
 test\_table1.tex
-\begin{center}\begin{tikzpicture}
+\begin{center}\noindent
+\begin{tikzpicture}
 \node {\resizebox{1\textwidth}{!}{
 \pgfplotstabletypeset
     [col sep=&,row sep=\\,sci zerofill]
@@ -453,6 +454,49 @@ test\_table2.tex
 }
    }
 };
+\end{tikzpicture}
+\end{center}
+\sphinxAtStartPar
+test\_canvas1.tex
+\begin{center}\begin{tikzpicture}
+\node (graph) {\scalebox{1}{
+\begin{tikzpicture}
+    \begin{axis}[
+        xlabel=Cost,
+        ylabel=Error]
+    \addplot[color=red,mark=x] coordinates {
+        (2,-2.8559703)
+        (3,-3.5301677)
+        (4,-4.3050655)
+        (5,-5.1413136)
+        (6,-6.0322865)
+        (7,-6.9675052)
+        (8,-7.9377747)
+    };
+    \end{axis}
+\end{tikzpicture}
+   }
+};
+\noindent
+\node[draw, minimum width=\textwidth, minimum height=1cm, anchor=center, fill=gray, opacity=0.3] at (graph.center) {};
+\end{tikzpicture}
+\end{center}
+\sphinxAtStartPar
+test\_canvas2.tex
+\begin{center}\begin{tikzpicture}
+    \begin{axis}[
+        xlabel=Cost,
+        ylabel=Error]
+    \addplot[color=red,mark=x] coordinates {
+        (2,-2.8559703)
+        (3,-3.5301677)
+        (4,-4.3050655)
+        (5,-5.1413136)
+        (6,-6.0322865)
+        (7,-6.9675052)
+        (8,-7.9377747)
+    };
+    \end{axis}
 \end{tikzpicture}
 \end{center}
 \sphinxAtStartPar
