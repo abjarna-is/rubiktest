@@ -26,11 +26,6 @@ jobs:
           pip install sphinx
           pip install sphinx-togglebutton
 
-      - name: Install PyData Theme
-        run: |
-          pip install pydata-sphinx-theme
-
-
       - name: Install LaTeX and PDF2SVG
         run: |
           sudo apt-get update

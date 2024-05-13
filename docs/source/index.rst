@@ -6,7 +6,7 @@
 Welcome to rubiktest-projectname's documentation by abjarna!
 ==============================================================
 
-Smá meira testing test. Hér verður flott síða.
+Smá meira testing test. Hér verður flott síða. lj lkjlkjlkj. asdf adsfasdf.
 
 Since Pythagoras, we know that :math:`a^2 + b^2 = c^2`.
 
@@ -86,7 +86,7 @@ Verðgólf inn í RST
       \coordinate (sfq) at  ({(\pfc-\sint)/(\sslp)},0);
       \coordinate (sfp) at  ({(\pfc-\sint)/(\sslp)},{\pfc});
    % DEMAND
-      \draw[thick,color=blue] plot (\demand) node[right] {Eftirspurn: $P(q) = -\frac{1}{2}q+\frac{9}{2}$};
+      \draw[thick,color=blue] plot (\demand) node[right] {Eftirspurnin: $P(q) = -\frac{1}{2}q+\frac{9}{2}$};
    % SUPPLY
       \draw[thick,color=purple] plot (\supply) node[right] {Framboð};
    % Draw axes, and dotted equilibrium lines.
@@ -122,6 +122,9 @@ test_table2.tex
 .. tikz::
    :align: left
    :include: _tex/test_table2.tex
+
+Euler's identity, equation :eq:`euler`, was elected one of the most
+
 
 +----------+----------+
 | Header 1 | Header 2 |
