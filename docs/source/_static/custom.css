@@ -25,7 +25,7 @@ Síðan er stærðin á myndunum skilgreint inn í tikz skránum.
     width: 896px
 }
 
-/* Sækir Computer Modern font-ana og skilgreinir ný font-family 
+/* Sækir Computer Modern font-ana og skilgreinir ný font-family */
 @font-face {
     font-family: 'Rit Serif';
     src: url('vendor/cmu/cmunrm.otf') format('opentype');
@@ -38,7 +38,7 @@ Síðan er stærðin á myndunum skilgreint inn í tikz skránum.
     font-family: 'Rit Typewriter Text';
     src: url('vendor/cmu/cmuntt.otf') format('opentype');
 }
-*/
+
 
 /* Sækir MathJax font-ana og skilgreinir ný font-family.
 ATH! Alls ekki góður stuðningur í þeim fyrir séríslenska stafi. 
@@ -57,7 +57,7 @@ ATH! Alls ekki góður stuðningur í þeim fyrir séríslenska stafi.
 */
 
 
-/* Sækir Libertinus font-ana og skilgreinir ný font-family. */
+/* Sækir Libertinus font-ana og skilgreinir ný font-family. 
 @font-face {
     font-family: 'Rit Serif';
     src: url('vendor/libertinus/LibertinusSerifDisplay-Regular') format('opentype');
@@ -70,7 +70,7 @@ ATH! Alls ekki góður stuðningur í þeim fyrir séríslenska stafi.
     font-family: 'Rit Typewriter Text';
     src: url('vendor/libertinus/LibertinusMono-Regular.otf') format('opentype');
 }
-
+*/
 
 
 /*
