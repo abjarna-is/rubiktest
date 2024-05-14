@@ -60,3 +60,37 @@ exclude_patterns = []
 html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
 html_css_files = ['custom.css']
+
+html_theme_options = {
+    "use_edit_page_button": True,
+    "icon_links": [
+        {
+            "name": "Facebook",
+            "url": "https://facebook.com/rubikrvk",
+            "icon": "fa-brands fa-facebook",
+        },
+        {
+            "name": "Instagram",
+            "url": "https://instagram.com/rubikrvk",
+            "icon": "fa-brands fa-instagram",
+        },
+        {
+            "name": "X.com",
+            "url": "https://x.com/rubikrvk",
+            "icon": "fa-brands fa-x-twitter",
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/company/rubikrvk",
+            "icon": "fa-brands fa-linkedin",
+        }
+    ]
+}
+
+html_context = {
+    # "github_url": "https://github.com/rubikrvk/rubiktest", # or your GitHub Enterprise site
+    "github_user": "rubikrvk",
+    "github_repo": "rubiktest",
+    "github_version": "main",
+    "doc_path": "docs/source/",
+}
