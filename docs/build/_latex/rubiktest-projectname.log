@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.13)  14 MAY 2024 17:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.13)  14 MAY 2024 19:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1427,7 +1427,7 @@ ive/2024/texmf-dist/fonts/type1/public/tex-gyre/qhvbi.pfb></usr/local/texlive/2
 024/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb></usr/local/texlive/2024/texmf-di
 st/fonts/type1/public/tex-gyre/qtmr.pfb>
-Output written on rubiktest-projectname.pdf (13 pages, 217717 bytes).
+Output written on rubiktest-projectname.pdf (13 pages, 217691 bytes).
 PDF statistics:
  140 PDF objects out of 1000 (max. 8388607)
  104 compressed objects within 2 object streams

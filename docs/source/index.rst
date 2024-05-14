@@ -6,9 +6,9 @@
 Welcome to rubiktest-projectname's documentation by abjarna!
 ==============================================================
 
-Smá meira testing test. Hér verður flott síða. lj lkjlkjlkj. asdf adsfasdf.
+Smá meira asdf afdafhf testing test. 1 + 2 = 9. Hér verður flott síða. lj lkjlkjlkj. asdf adsfasdf.
 
-Since Pythagoras, we know that :math:`a^2 + b^2 = c^2`.
+Since Pythagoras, we know that :math:`1+2=9`.
 
 .. math:: e^{i\pi} + 1 = 0
    :label: euler

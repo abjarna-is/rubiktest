@@ -23,3 +23,26 @@ Allar myndir í miðjunni
 .figure img {
     width: 896px
 }
+
+/*
+Setja computer modern á síðuna
+*/
+
+@font-face {
+    font-family: 'CMU Serif';
+    src: url('vendor/cmu/cmunrm.otf') format('opentype');
+}
+@font-face {
+    font-family: 'CMU Sans Serif';
+    src: url('vendor/cmu/cmunss.otf') format('opentype');
+}
+@font-face {
+    font-family: 'CMU Typewriter Text';
+    src: url('vendor/cmu/cmuntt.otf') format('opentype');
+}
+
+html {
+    --pst-font-family-base: 'CMU Serif', serif;
+    --pst-font-family-heading: 'CMU Sans Serif', sens-serif;
+    --pst-font-family-monospace: 'CMU Typewriter Text', monospace;
+}
