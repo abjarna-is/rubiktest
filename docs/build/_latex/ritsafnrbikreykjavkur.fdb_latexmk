@@ -1,11 +1,11 @@
 # Fdb version 4
-["makeindex ritsafnrbikreykjavkur.idx"] 1715716145.60565 "ritsafnrbikreykjavkur.idx" "ritsafnrbikreykjavkur.ind" "ritsafnrbikreykjavkur" 1715722995.08059 0
-  "ritsafnrbikreykjavkur.idx" 1715722992.80427 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex ritsafnrbikreykjavkur.idx"] 1715716145.60565 "ritsafnrbikreykjavkur.idx" "ritsafnrbikreykjavkur.ind" "ritsafnrbikreykjavkur" 1715723290.60225 0
+  "ritsafnrbikreykjavkur.idx" 1715723288.2369 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "ritsafnrbikreykjavkur.ilg"
   "ritsafnrbikreykjavkur.ind"
   (rewritten before read)
-["pdflatex"] 1715722991.8704 "ritsafnrbikreykjavkur.tex" "ritsafnrbikreykjavkur.pdf" "ritsafnrbikreykjavkur" 1715722995.08071 0
+["pdflatex"] 1715723287.33145 "ritsafnrbikreykjavkur.tex" "ritsafnrbikreykjavkur.pdf" "ritsafnrbikreykjavkur" 1715723290.60236 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc" 1529098226 2457 aaabbccba4df2a7f7371410ee4e075a3 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc" 1529098226 3124 3813fd4c981d99822890a2861b0d274c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -284,14 +284,14 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1715610869.65933 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1715610771 8221425 fc2f7c60b34b76ecf6facdc7fa161ce8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "ritsafnrbikreykjavkur.aux" 1715722994.92904 1023 82c03e5c8388d25760f1652d209ee340 "pdflatex"
+  "ritsafnrbikreykjavkur.aux" 1715723290.44579 1023 82c03e5c8388d25760f1652d209ee340 "pdflatex"
   "ritsafnrbikreykjavkur.ind" 1715716145.74728 0 d41d8cd98f00b204e9800998ecf8427e "makeindex ritsafnrbikreykjavkur.idx"
-  "ritsafnrbikreykjavkur.out" 1715722994.92961 139 e81c69f63ad497b126c77c1297be8a5d "pdflatex"
-  "ritsafnrbikreykjavkur.tex" 1715722991.69816 20002 99813808cad519698213380a516b7d81 ""
-  "ritsafnrbikreykjavkur.toc" 1715722994.9298 104 47628807c494092600637777a1fc427f "pdflatex"
+  "ritsafnrbikreykjavkur.out" 1715723290.44687 139 e81c69f63ad497b126c77c1297be8a5d "pdflatex"
+  "ritsafnrbikreykjavkur.tex" 1715723287.1757 20007 338b87a2d73ef4d6a27bd5fb883b31db ""
+  "ritsafnrbikreykjavkur.toc" 1715723290.44717 104 47628807c494092600637777a1fc427f "pdflatex"
   "sphinx.sty" 1715702471.8806 44560 f9fbf51072c954d129c9bd5284cc4ccf ""
   "sphinxcontribtikz.sty" 1715702471.88078 773 1e308d24d0f0d7630d9b36d0654c16f2 ""
-  "sphinxhighlight.sty" 1715722991.65572 7553 83fb52292c17957d9f4aadcb28c57a87 ""
+  "sphinxhighlight.sty" 1715723287.1428 7553 83fb52292c17957d9f4aadcb28c57a87 ""
   "sphinxlatexadmonitions.sty" 1715702471.88102 10989 c38302e64c2bb47779f086869b246760 ""
   "sphinxlatexcontainers.sty" 1715702471.88109 901 d3a3a1b7b2547f47ade2499350b5c420 ""
   "sphinxlatexgraphics.sty" 1715702471.88117 4840 a9578332b6f3b35e198751fb632c9b79 ""
@@ -306,7 +306,7 @@
   "sphinxlatexstyletext.sty" 1715702471.88206 8589 a7e8f95eb4fef6c1cd2623cd417d6467 ""
   "sphinxlatextables.sty" 1715702471.88222 57829 997133f8082b07d1e9aafcd87331d9bf ""
   "sphinxmanual.cls" 1715702471.88232 4241 7b0d7a37df7b5715fb0dbd585c52ecdb ""
-  "sphinxmessages.sty" 1715722991.70079 745 3f5fcd6cdd7964ed608767954a8ced6f ""
+  "sphinxmessages.sty" 1715723287.17826 745 3f5fcd6cdd7964ed608767954a8ced6f ""
   "sphinxoptionsgeometry.sty" 1715702471.88246 2061 47bb34b8ed8a78823eb0c886abfb9f4d ""
   "sphinxoptionshyperref.sty" 1715702471.88253 1094 79beb8b8a3f10784f8cce804e0f9d3aa ""
   "sphinxpackageboxes.sty" 1715702471.88265 36615 1d74c63e665ede6c648fa08c42ea70fb ""

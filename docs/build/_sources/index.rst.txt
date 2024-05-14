@@ -150,7 +150,7 @@ test_canvas3.tex
 .. tikz::
    :include: _tex/test_canvas3.tex
 
-Euler's identity, equation :eq:`euler`, was elected one of the most
+Euler's identity, asdf equation :eq:`euler`, was elected one of the most
 
 
 +----------+----------+

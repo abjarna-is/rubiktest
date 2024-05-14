@@ -60,7 +60,7 @@ ATH! Alls ekki góður stuðningur í þeim fyrir séríslenska stafi.
 /* Sækir Libertinus font-ana og skilgreinir ný font-family. */
 @font-face {
     font-family: 'Rit Serif';
-    src: url('vendor/libertinus/LibertinusSerif-Regular.otf') format('opentype');
+    src: url('vendor/libertinus/LibertinusSerifDisplay-Regular') format('opentype');
 }
 @font-face {
     font-family: 'Rit Sans Serif';
