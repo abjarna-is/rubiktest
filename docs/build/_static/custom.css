@@ -4,14 +4,11 @@ Kóði til að láta transparent hluta af SVG eða PNG myndum í pydata theme-in
 */
 
 html[data-theme='dark'] .bd-content img[src*=".svg"]:not(.only-dark):not(.dark-light) {
-    filter: invert(100%);  /* Remove filter effects that alter appearance */
-    background: transparent; /* Ensure background is transparent */
+    filter: invert(100%);
+    background: transparent;
 }
 
-/*
-Allar myndir í miðjunni
-*/
-
+/* Setur allar myndir o.fl sem eru merktar sem class="figure" í miðjuna */
 .figure {
     display: flex;
     flex-direction: column;
@@ -20,14 +17,15 @@ Allar myndir í miðjunni
     text-align: center;
 }
 
+/*
+Gerir allar myndir o.fl. í 896px (passa að þær séu SVG), svo þær fylla alveg út í síðuna í desktop.
+Síðan er stærðin á myndunum skilgreint inn í tikz skránum.
+*/
 .figure img {
     width: 896px
 }
 
-/*
-Setja computer modern á síðuna
-*/
-
+/* Sækir Computer Modern font-ana og skilgreinir ný font-family */
 @font-face {
     font-family: 'CMU Serif';
     src: url('vendor/cmu/cmunrm.otf') format('opentype');
@@ -41,8 +39,35 @@ Setja computer modern á síðuna
     src: url('vendor/cmu/cmuntt.otf') format('opentype');
 }
 
+/*
+Setur ný font-family inn í breytur sem theme-ið notar.
+ATH! Að CMU Sans Serif er sett á bæði "base" og "heading".
+Síðan er skilgreint fyrir neðan hvað á sérstaklega að vera CMU Serif.
+*/
 html {
-    --pst-font-family-base: 'CMU Serif', serif;
-    --pst-font-family-heading: 'CMU Sans Serif', sens-serif;
-    --pst-font-family-monospace: 'CMU Typewriter Text', monospace;
+    --pst-font-family-base: 'CMU Sans Serif', var(--pst-font-family-base-system);
+    --pst-font-family-heading: 'CMU Sans Serif', var(--pst-font-family-heading-system);
+    --pst-font-family-monospace: 'CMU Typewriter Text', var(--pst-font-family-monospace-system);
 }
+
+/* Setur allan texta inn í bd-article í CMU Serif, nema annað sé tekið fram í <p> með class */
+article.bd-article p:not([class]) {
+    font-family: 'CMU Serif', serif;
+}
+
+/* Setur caption-text undir myndir o.fl. í CMU Sans Serif, en ekki CMU Serif */
+article.bd-article p:not([class]) .caption-text {
+    font-family: var(--pst-font-family-base);
+}
+
+/* Setur allan texta í efnisyfirlitinu (skilgrein með id="indices-and-tables") í CMU Sans Serif */
+section#indices-and-tables * {
+    font-family: var(--pst-font-family-base);
+}
+
+
+
+
+
+
+

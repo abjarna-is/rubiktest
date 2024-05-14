@@ -6,10 +6,10 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'rubiktest-projectname'
-copyright = '2024, rubiktest-authorname'
-author = 'rubiktest-authorname'
-release = '0.1.0'
+project = 'Ritsafn RÚBIK Reykjavíkur'
+copyright = '2024, RÚBIK Reykjavík ehf'
+author = 'RÚBIK Reykjavík ehf'
+release = ''
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
