@@ -25,47 +25,81 @@ Síðan er stærðin á myndunum skilgreint inn í tikz skránum.
     width: 896px
 }
 
-/* Sækir Computer Modern font-ana og skilgreinir ný font-family */
+/* Sækir Computer Modern font-ana og skilgreinir ný font-family 
 @font-face {
-    font-family: 'CMU Serif';
+    font-family: 'Rit Serif';
     src: url('vendor/cmu/cmunrm.otf') format('opentype');
 }
 @font-face {
-    font-family: 'CMU Sans Serif';
+    font-family: 'Rit Sans Serif';
     src: url('vendor/cmu/cmunss.otf') format('opentype');
 }
 @font-face {
-    font-family: 'CMU Typewriter Text';
+    font-family: 'Rit Typewriter Text';
     src: url('vendor/cmu/cmuntt.otf') format('opentype');
 }
+*/
+
+/* Sækir MathJax font-ana og skilgreinir ný font-family.
+ATH! Alls ekki góður stuðningur í þeim fyrir séríslenska stafi. 
+@font-face {
+    font-family: 'Rit Serif';
+    src: url('vendor/mathjax/MathJax_Main-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Rit Sans Serif';
+    src: url('vendor/mathjax/MathJax_SansSerif-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Rit Typewriter Text';
+    src: url('vendor/mathjax/MathJax_Typewriter-Regular.otf') format('opentype');
+}
+*/
+
+
+/* Sækir Libertinus font-ana og skilgreinir ný font-family. */
+@font-face {
+    font-family: 'Rit Serif';
+    src: url('vendor/libertinus/LibertinusSerif-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Rit Sans Serif';
+    src: url('vendor/libertinus/LibertinusSans-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Rit Typewriter Text';
+    src: url('vendor/libertinus/LibertinusMono-Regular.otf') format('opentype');
+}
+
+
 
 /*
 Setur ný font-family inn í breytur sem theme-ið notar.
-ATH! Að CMU Sans Serif er sett á bæði "base" og "heading".
-Síðan er skilgreint fyrir neðan hvað á sérstaklega að vera CMU Serif.
+ATH! Að Rit Sans Serif er sett á bæði "base" og "heading".
+Síðan er skilgreint fyrir neðan hvað á sérstaklega að vera Rit Serif.
 */
 html {
-    --pst-font-family-base: 'CMU Sans Serif', var(--pst-font-family-base-system);
-    --pst-font-family-heading: 'CMU Sans Serif', var(--pst-font-family-heading-system);
-    --pst-font-family-monospace: 'CMU Typewriter Text', var(--pst-font-family-monospace-system);
+    --pst-font-family-base: 'Rit Sans Serif', var(--pst-font-family-base-system);
+    --pst-font-family-heading: 'Rit Sans Serif', var(--pst-font-family-heading-system);
+    --pst-font-family-monospace: 'Rit Typewriter Text', var(--pst-font-family-monospace-system);
 }
 
-/* Setur allan texta inn í bd-article í CMU Serif, nema annað sé tekið fram í <p> með class */
+/* Setur allan texta inn í bd-article í Rit Serif, nema annað sé tekið fram í <p> með class */
 article.bd-article p:not([class]) {
-    font-family: 'CMU Serif', serif;
+    font-family: 'Rit Serif', serif;
 }
 
-/* Setur caption-text undir myndir o.fl. í CMU Sans Serif, en ekki CMU Serif */
+/* Setur caption-text undir myndir o.fl. í Rit Sans Serif, en ekki Rit Serif */
 article.bd-article p:not([class]) .caption-text {
     font-family: var(--pst-font-family-base);
 }
 
-/* Setur allan texta í efnisyfirlitinu (skilgrein með id="indices-and-tables") í CMU Sans Serif */
+/* Setur allan texta í efnisyfirlitinu (skilgrein með id="indices-and-tables") í Rit Sans Serif */
 section#indices-and-tables * {
     font-family: var(--pst-font-family-base);
 }
 
-/* Setur allan texta í header-num í töflum í CMU Sans Serif */
+/* Setur allan texta í header-num í töflum í Rit Sans Serif */
 article.bd-article table thead * {
     font-family: var(--pst-font-family-base) !important;
 }
