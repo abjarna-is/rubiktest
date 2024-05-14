@@ -65,7 +65,10 @@ section#indices-and-tables * {
     font-family: var(--pst-font-family-base);
 }
 
-
+/* Setur allan texta í header-num í töflum í CMU Sans Serif */
+article.bd-article table thead * {
+    font-family: var(--pst-font-family-base) !important;
+}
 
 
 
