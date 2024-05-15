@@ -42,7 +42,8 @@ jobs:
       - name: Copy Custom Theme File
         run: |
           THEME_DIR=$(python -c "import pydata_sphinx_theme; print(pydata_sphinx_theme.__path__[0])")
-          cp custom_theme/edit-this-page.html $THEME_DIR/theme/pydata_sphinx_theme/components/edit-this-page.html          
+          cp custom_theme/edit-this-page.html $THEME_DIR/theme/pydata_sphinx_theme/components/edit-this-page.html
+          cp custom_theme/sourcelink.html $THEME_DIR/theme/pydata_sphinx_theme/components/sourcelink.html
 
       - name: Build Sphinx Documentation
         run: |
