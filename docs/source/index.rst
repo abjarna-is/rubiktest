@@ -8,6 +8,8 @@ Welcome to rubiktest-projectname's documentation by abjarna!
 
 Smá meira dæmi þá æða áfram sýki. asdsdff afasf testing test. 1 + 2 = 9. Hér verður flott síða. lj lkjlkjlkj. asdf adsfasdf.
 
+Smá breyting á hithub með abjarna-is.
+
 Since Pythagoras, we know that :math:`1+2=9`.
 
    asdf asdadsffasdf asdf asdf asdf
