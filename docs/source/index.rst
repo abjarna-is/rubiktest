@@ -20,6 +20,8 @@ ef þessi breyting á að fara i gegn, þá þarf að breyta þessu líka.
 
   alert('Hello, World!')
 
+þetta þá líka.
+
 .. math:: e^{i\pi} + 1 = 0
    :label: euler
 
